@@ -43,8 +43,8 @@ const Student = sequelize.define('Student', {
 });
 
 module.exports = {
-    sequelize: sequelize,
-    Student: Student
+    sequelize,
+    Student
 };
 
 

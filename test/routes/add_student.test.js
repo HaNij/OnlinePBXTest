@@ -19,11 +19,16 @@ test('add_student has added values to DB', async (t) => {
     }
   });
 
-  t.equal(res.payload,
-      JSON.stringify({
-        status: 'ok'
-      })
-  );
-  //TODO: добавить удаление строки после теста
+  const { status, result } = JSON.parse(res.payload);
+  const { id, firstName, middleName, lastName, date_birth, rating } = result;
+
+  t.equal(status, 'ok');
+
+  db.Student.destroy({
+    where: {
+      id: id
+    }
+  });
+
 })
 

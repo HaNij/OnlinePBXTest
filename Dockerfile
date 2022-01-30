@@ -1,10 +1,7 @@
 FROM node:latest
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
-RUN adduser -S app
-COPY studentapp/ .
+COPY . /opt/app
 RUN npm install
-RUN chown -R app /opt/app
-USER app
 EXPOSE 3000
-CMD [ "node", "app.js" ]
+CMD [ "npm", "run", "start" ]

@@ -6,7 +6,7 @@ module.exports = fp (async function (fastify, opts) {
         routePrefix: '/documentation',
         swagger: {
             info: {
-                title: 'Тестовое задание OnlinePBX',
+                title: 'Тестовое задание по студентам',
                 description: 'Реализовать REST АПИ для клиентского приложения, которое должно отображать страницу со списком студентов с возможностями:\n' +
                     '1. добавить нового студента в этот список;\n' +
                     '2. удалить существующего студента;\n' +
@@ -16,11 +16,9 @@ module.exports = fp (async function (fastify, opts) {
                     '- дата рождения\n' +
                     '- успеваемость (опционально из справочника)\n' +
                     'требования:\n' +
-                    '1. typescript;\n' +
-                    '2. node.js\n' +
-                    '3. автогенерируемое swagger-описание API;\n' +
-                    '4. typeORM;\n' +
-                    '5. возможные значения успеваемости (неуд/уд/хор/отл) должны быть доступны клиентскому приложению через endpoint API;',
+                    '1. node.js\n' +
+                    '2. автогенерируемое swagger-описание API;\n' +
+                    '3. serialize;\n',
                 version: '0.0.1'
             },
             externalDocs: {
